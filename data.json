@@ -1,0 +1,10 @@
+{
+"top":true,
+"title":"Survey Form Builder",
+"liveUrl":"https://suv-builder.netlify.app/",
+"background":"https://e.top4top.io/p_2288f0aav1.jpg",
+"description": "Using this project, you will be abel to add, delete, or modify a survey question of your own. Also, you will be able to change question type (Multi-choice, single-choice, text-based) or reset the whole form. At the end, you will be able to print the survey using the Print button below",
+"skills": ["CSS3","JS(E7+)", "HTML5"]
+}
+
+
