@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+  <title>Survey Form Builder</title>
+</head>
+<body>
+
+
+  <div class="mobile-message">
+    <h1>Sorry, This Website Is Only For Large and Medium Size Screens at the Moment </h1>
+  </div>
+  <header class="main__header">
+   <h1 style="flex:1">Survey Form Builder</h1>
+ </header>
+ <main>
+  <header class="main__form-header"><button class="form-header__reset-btn">RESET</button></header>
+   <form>
+    <!-- Initial Survey -->
+    <section class="form-section multiple-choice" kind="radio">
+      <div class="form-section__section-edit-group">
+        <button class="section-edit-group__delete-btn" type="button">DELETE</button>
+        <button class="section-edit-group__add-btn" type="button">ADD</button>
+      </div>
+      <h3 class="form-section__form-question">What you're more likely to do in the weekend</h3>
+      <div class="form-section__form-options">
+        <label class="form-options__option"><input name="first-question" type="radio" class="form-options__option"/>Biking
+         <div class="form-section__edit-group">
+          <button class="edit-group__delete-btn" type="button">DELETE</button>
+          <button class="edit-group__edit-btn" type="button">EDIT</button>
+        </div>
+        </label>
+        <label class="form-options__option"><input name="first-question" type="radio" class="form-options__option"/>Swimming
+          <div class="form-section__edit-group">
+            <button class="edit-group__delete-btn" type="button">DELETE</button>
+            <button class="edit-group__edit-btn" type="button">EDIT</button>
+          </div>
+         </label>
+         <label class="form-options__option"><input name="first-question" type="radio" class="form-options__option"/>Running
+          <div class="form-section__edit-group">
+            <button class="edit-group__delete-btn" type="button">DELETE</button>
+            <button class="edit-group__edit-btn" type="button">EDIT</button>
+          </div>
+         </label>
+         <label class="form-options__option"><input name="first-question" type="radio" class="form-options__option"/>Hiking
+          <div class="form-section__edit-group">
+            <button class="edit-group__delete-btn" type="button">DELETE</button>
+            <button class="edit-group__edit-btn" type="button">EDIT</button>
+          </div>
+         </label>
+
+
+      </div>
+     
+    </section>
+
+    <section class="form-section one-choice" kind="checkbox">
+      <div class="form-section__section-edit-group">
+        <button class="section-edit-group__delete-btn" type="button">DELETE</button>
+        <button class="section-edit-group__add-btn" type="button">ADD</button>
+      </div>
+      <h3 class="form-section__form-question">What is your favorite sport(s)</h3>
+      <div class="form-section__form-options">
+        <label class="form-options__option"><input name="second-question" type="checkbox" class="form-options__option"/>Football
+         <div class="form-section__edit-group">
+          <button class="edit-group__delete-btn" type="button" type="button">DELETE</button>
+          <button class="edit-group__edit-btn" type="button" type="button">EDIT</button>
+        </div>
+        </label>
+        <label class="form-options__option"><input name="second-question" type="checkbox" class="form-options__option"/>Basketball
+          <div class="form-section__edit-group">
+            <button class="edit-group__delete-btn" type="button">DELETE</button>
+            <button class="edit-group__edit-btn" type="button">EDIT</button>
+          </div>
+         </label>
+         <label class="form-options__option"><input name="second-question" type="checkbox" class="form-options__option"/>Volleyball
+          <div class="form-section__edit-group">
+            <button class="edit-group__delete-btn" type="button">DELETE</button>
+            <button class="edit-group__edit-btn" type="button">EDIT</button>
+          </div>
+         </label>
+         <label class="form-options__option"><input name="second-question" type="checkbox" class="form-options__option"/>Karate
+          <div class="form-section__edit-group">
+            <button class="edit-group__delete-btn" type="button">DELETE</button>
+            <button class="edit-group__edit-btn"type="button"> EDIT</button>
+          </div>
+         </label>
+  
+      </div>
+
+    </section>
+    
+    <section class="form-section textual">
+      <div class="form-section__section-edit-group">
+        <button class="section-edit-group__delete-btn aside__aside-header--unactive">DELETE</button>
+      </div>
+      <h3 class="form-section__form-question">What do you think of Pepsi.co</h3>
+     <textarea class="form-section__response"></textarea>
+    </section>
+
+   </form>
+   <footer class="main__form-footer">
+    <button class="form-footer__print-btn">PRINT</button>
+  </footer>
+
+   <aside>
+   <header class="aside__aside-header">
+     <button class="aside-header__create-btn" name="create" type="button">CREATE</button>
+     <button class="aside-header__edit-btn" name="edit" type="button">EDIT</button>
+   </header>
+   <div class="aside__create-section" kind="create">
+    <button class="create-section__option" kind="checkbox"><img src="images/mutliple-choice.png" class="option__img"/>Multiple choice question</button>
+    <button class="create-section__option" kind="radio"><img src="images/check-icon.png" class="option__img"/> Single choice question</button>
+    <button class="create-section__option" kind="text"><img src="images/text-icon.png" class="option__img"/> Text-based question</button>
+   </div>
+   <div class="aside__edit-section" kind="edit">
+     <label class="edit-section__element-type">Element Type: <span style="color:rgb(56, 55, 55); background:transparent;">None</span></label>
+    <label class="edit-section__name-attribute">
+      Option Text:
+      <input type="text"/>
+    </label>
+    <label class="edit-section__type-attribute">
+      Option Type:
+      <select><option>Single Choice Button</option><option>Multiple Choice Button</opiton>
+      </select>
+    </label>
+
+   </div>
+   </aside>
+  </main>
+ <noscript> This website needs JavaScript to run!</noscript>
+</body>
+</html>

@@ -1,0 +1,364 @@
+/* ------ FONTS STYLESHEET ------*/
+@font-face {
+    font-family: NovaBold;
+    src: url("fonts/NOVABOLD.otf");
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("fonts/BebasNeue.ttf");
+}
+@font-face {
+    font-family: Outfit;
+    src: url("fonts/Outfit.ttf");
+}
+@font-face {
+    font-family: SpaceMono;
+    src: url("fonts/SpaceMono.ttf");
+    font-weight: 700;
+}
+/*------------------------------*/
+body{
+    margin:0;
+
+}
+h3{
+border: none;
+outline:none; 
+}
+h3::selection{
+ color:rgb(66, 66, 66);
+ background:transparent;
+}
+label::selection{
+    color:gray;
+    background:transparent;
+}
+.mobile-message{
+    display: none;
+}
+.main__header{
+  background:rgb(0, 119, 255);
+  font-family: 'Staatliches', cursive;
+    letter-spacing: 0.1em;
+  color:white;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0.6em 0;
+  position: sticky;
+  top:0;
+  z-index: 100;
+  height: 70px;
+  font-size: 0.7em;
+  display:flex;
+  justify-content: start;
+}
+main{
+  width: 100%;
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   grid-template-areas: 
+   "aside header"
+   "aside form"
+   "aside form"
+   "aside footer";
+}
+main *{
+    background: white;
+    cursor: pointer;
+}
+
+input[type="radio"]{
+    -moz-appearance:menuseparator;
+}
+.main__header span{
+    color:rgb(0, 183, 255);   
+}
+.main__form-header{
+    grid-area: header;
+   padding: 2em;
+
+}
+.form-header__reset-btn{
+  background: red;
+  outline: none;
+  border: none;
+  color:white;
+  padding: 0.1em 0.7em;
+  font-family: "Bebas Neue", monospace;
+  font-size: 1.5em;
+  margin-left: 5%;
+}
+.form-header__reset-btn:active{
+    background-color: rgb(184, 6, 6);
+}
+form{
+    grid-area: form;
+    width: 80%;
+    margin: 4em 0;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.form-section{
+    font-family: "Outfit", monospace;
+    box-sizing: border-box;
+    letter-spacing: 0.08em;
+    padding: 2em;
+    box-shadow: 0 0 10px 0 gray;
+    border-top: 2px solid orange;
+    position: relative;
+}
+.form-section:hover .form-section__section-edit-group,.form-options__option:hover .form-section__edit-group{
+    opacity: 100%;
+}
+.form-section__form-question{
+    font-size: 1.3em;
+    padding: 1em 0 2em 0;
+    border-bottom: 1px solid gray;
+}
+.form-section__form-options{
+ display: flex;
+ flex-direction: column;
+ row-gap: 10px;
+}
+.form-options__option{
+ position: relative;
+ font-size: 1.1em;
+}
+.form-section__edit-group, .form-section__section-edit-group{
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 20%;
+}
+
+.form-section__edit-group{
+    opacity: 20%;
+}
+.form-section__response{
+    min-height: 100px;
+    width: 80%;
+}
+.form-section__section-edit-group{
+    top: 3em;
+    right: 2em;
+}
+.edit-group__delete-btn, .edit-group__edit-btn, .section-edit-group__delete-btn, .section-edit-group__add-btn{
+    outline: none;
+    border: none;
+    font-size: 1.2em;
+    font-family: "Bebas Neue", monospace;
+    padding: 0.1em 0.7em;
+    transition: all 0.13s ease-out;
+}
+
+.edit-group__delete-btn, .section-edit-group__delete-btn{
+    background: red;
+    color:white;
+}
+input[class="optional-option__response"]{
+    border:none;
+    transition: all 0.13s ease-out;
+    border-bottom: rgba(0, 109, 128, 0.637) solid 2px;
+    margin-left: 1em;
+    font-size: 1em;
+    font-family: "Outfit", monospace;
+    display: inline-block;
+    width: 130px;
+    box-sizing: border-box;
+    padding: 0.4em 0.3em;
+}
+input[class="optional-option__response"]:focus{
+    border: none;
+    border-bottom: rgb(0, 109, 128) solid 2px;
+    outline: none;
+}
+.section-edit-group__add-btn{
+  background: transparent;
+  border: 1.5px solid green;
+  box-sizing: border-box;
+}
+.section-edit-group__add-btn:hover{
+    color: white; 
+    background:green;
+}
+
+
+.main__form-footer{
+    grid-area: footer;
+    justify-self: center;
+    margin-bottom: 4em;
+}
+.form-footer__print-btn, .form-footer__copy-btn{
+    color:white;
+    font-family: "Bebas Neue",monospace;
+    background:darkblue;
+    font-size: 1.7em;
+    border:none;
+    outline: none;
+    padding: 0.1em 0.6em;
+}
+.form-footer__copy-btn{
+    background:transparent;
+    border: green 1.5px solid;
+    color:black;
+    padding: 0.06em 0.6em;
+    transition: all 0.13s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.form-footer__copy-btn:hover{
+  color:white;
+  background:green;
+}
+aside{
+    grid-area: aside;
+    position: fixed;
+    padding:0 ;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 0 gray;
+    height: calc(100vh - 50px);
+    width: 25%;
+    max-width: 500px;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", monospace;
+    font-size: 1.3em;
+    letter-spacing: 0.05em;
+    padding: 0 1em;
+}
+aside *{
+    cursor: pointer;
+}
+aside button{
+ border: none;
+ outline: none;
+ font-size: 1.1em;
+}
+.aside__aside-header{
+  margin: 4em 0 2em;
+  display: flex;
+ column-gap: 3px;
+}
+.aside__aside-header button{
+    flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: 0.05em;
+     transition: all 0.13s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.aside__aside-header--inactive{
+    border-bottom: solid gray 2px;
+}
+.aside__aside-header button:hover{
+    background: rgb(199, 196, 196);
+}
+
+.aside__create-section{
+    font-family: "Outfit", monospace;
+    font-size: inherit;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.aside__create-section button{
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: 0.05em;
+    padding: 0.9em 0.2em;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    width: 100%;
+}
+.aside__aside-header--active{
+    background: rgb(153, 153, 153);
+    border-bottom:solid 2px red;
+}
+.option__img{
+  width: 26px;
+ 
+}
+.create-section__option:hover{
+    background: rgb(199, 196, 196);
+}
+.create-section__option:active{
+    background: rgb(153, 153, 153);
+}
+
+.aside__edit-section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+.aside__edit-section label{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+label[class*="attribute"] input{
+ outline: none;
+ border:none;
+ border-bottom: 2px solid rgb(160, 6, 6);
+ transition: all 0.11s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+ width: 120px;
+}
+label[class*="attribute"] select{
+    font-family: "Outfit", monospace;
+    background: transparent;
+    border: none;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+}
+label.edit-section__element-type{
+    box-sizing: border-box;
+    padding: 0.3em 1em;
+    background: rgb(0, 183, 255);
+}
+
+/*---- MEDIA QUERIES ---*/
+@media screen and (max-width: 1000px) {
+  
+    body *{
+     display: none;     
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .mobile-message, .mobile-message *{
+        display:block;
+       width: 100%;
+       height: 300px;
+    }
+}
+
+@media print {
+    .main__header{
+     display: none;
+    }
+    aside{
+        display: none;
+    }
+    .main__form-header{
+        display: none;
+    }
+    .main__form-footer{
+        display: none;
+    }
+    div[class*="edit-group"]{
+        display: none;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+    }
+}
+/*----------------------*/
